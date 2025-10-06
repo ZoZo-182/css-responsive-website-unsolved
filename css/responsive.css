@@ -1,17 +1,332 @@
-/* 
-  * Add the styles that belong to the DESKTOP view only
-  * Add the media rule and the styles that are common within the TABLET and MOBILE views
-  * Add the media rule and the styles that belong to the MOBILE view only
-*/
-
-@media (min-width: 1024px) {
-  /* .top-navigation .trigram {
+  @media
+  (min-width: 1024px) {
+  .top-navigation .trigram {
     display: none;
-  } */
+    color: black;
+    border-radius: 5px;
+    background-color: gray;
+  }
 
   /* 👇👇👇 Add the styles that belong to the DESKTOP view only beneath 👇👇👇 */
+  li > a:first-child:hover {
+    text-decoration: white underline;
+    color: white;
+    border-radius: 5px;
+    background-color: grey;
+  }
+
+  .facebook:hover {
+    color: white;
+    background-color: gray;
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+    border-radius: 5px;
+  }
+
+  .twitter:hover {
+    color: white;
+    background-color: gray;
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+    border-radius: 5px;
+  }
+
+  .linkedin:hover {
+    color: white;
+    background-color: gray;
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+    border-radius: 5px;
+  }
+
+  .linked-in:hover {
+    color: white;
+    background-color: gray;
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+    border-radius: 5px;
+  }
+
+  .instagram:hover {
+    color: white;
+    background-color: grey;
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+    border-radius: 5px;
+  }
 }
 
 /* 👇👇👇 Add the media rule and the styles that are common within the TABLET and MOBILE views beneath 👇👇👇 */
+@media (min-width: 768px) AND (max-width: 1023px) {
+  .top-navigation > ul {
+    display: none;
+  }
+
+  .portfolio-list {
+    display: flex;
+    flex-flow: column;
+    width: 100%;
+  }
+
+  .portfolio-item {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .item-description {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  .teammate-list {
+    display: flex;
+    flex-flow: column nowrap;
+    width: 50%;
+  }
+
+  .teammate-content .subtext {
+    width: 350px;
+  }
+
+  .teammates-list-wrapper {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .teammate {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    width: calc(50% - 5px);
+  }
+
+  .teammate-img-wrapper {
+    display: flex;
+    width: 100%;
+    gap: 20px;
+  }
+
+  .teammate-data {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .teammate-social-icons {
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .instagram:hover,
+  .linked-in:hover,
+  .linkedin:hover,
+  .twitter:hover,
+  .facebook:hover {
+    color: black;
+    transform: scale(1.5);
+    transition: transform 0.3s ease;
+    border-radius: 5px;
+  }
+
+  .teammates-list:before {
+    display: none;
+  }
+
+  .teammates-list:after {
+    display: none;
+  }
+
+  li > a:first-child:hover {
+    text-decoration: white underline;
+    color: white;
+  }
+
+  .footer-content {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 50%;
+  }
+
+  footer .social-icons span {
+    display: none;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .footer .social-icons {
+    display: flex;
+    width: 10px;
+  }
+
+  .footer-contacts {
+    display: flex;
+    flex-flow: row wrap;
+    width: 75%;
+    justify-content: space-around;
+    align-items: center;
+    gap: 130px;
+  }
+
+  .facebook,
+  .linked-in,
+  .instagram,
+  .twitter {
+    display: flex;
+    width: 0px;
+    justify-content: center;
+    align-items: center;
+  }
+}
 
 /* 👇👇👇 Add the media rule and the styles that belong to the MOBILE view only beneath 👇👇👇 */
+@media (min-width: 1px) AND (max-width: 767px) {
+  .header-content {
+    width: 100%;
+  }
+  .portfolio-item {
+    display: flex;
+    flex-direction: column;
+  }
+  .portfolio-list {
+    display: flex;
+    flex-direction: column;
+  }
+  .item-title {
+    display: flex;
+    justify-content: center;
+  }
+  .teammates-list:after,
+  .teammates-list:before {
+    display: none;
+  }
+  .teammate {
+    display: flex;
+    flex-direction: row;
+    border: 2px solid grey;
+    padding: 1rem;
+    width: 100%;
+  }
+  .teammate-info .teammate-name .teammate-role {
+    display: flex;
+    justify-content: flex-start;
+  }
+  .teammate-data {
+    display: flex;
+    align-items: flex-start;
+    padding-top: 20px;
+    width: 100%;
+  }
+  .section-info {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+  .teammates-list-wrapper {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .portfolio-item-info .item-description {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .teammate-social-icons {
+    gap: 15px;
+  }
+  .teammate-image-wrapper {
+    width: 100%;
+  }
+  .top-navigation .trigram i.fa.fa-bars {
+    display: contents;
+    color: gray;
+  }
+  .top-navigation ul {
+    display: none;
+  }
+  .content .section-info p.subtext {
+    color: #969696;
+  }
+  .header-content {
+    border-bottom: 2px solid #969696;
+  }
+  .top-navigation a:hover {
+    color: blue;
+  }
+  .facebook:hover {
+    color: blue;
+  }
+  .twitter:hover {
+    color: rgb(9, 216, 248);
+  }
+  .linkedin:hover {
+    color: rgb(9, 216, 248);
+  }
+  .fa-facebook:hover {
+    color: blue;
+  }
+  .fa-twitter:hover {
+    color: rgb(9, 216, 248);
+  }
+  .fa-linkedin:hover {
+    color: rgb(9, 216, 248);
+  }
+  .linked-in:hover {
+    color: rgb(9, 216, 248);
+  }
+  .instagram:hover {
+    color: rgb(255, 106, 0);
+  }
+  .fa-instagram:hover {
+    color: rgb(255, 106, 0);
+  }
+  .email a:hover {
+    color: blue;
+  }
+  .phones a:hover {
+    color: blue;
+  }
+  .social-icons {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+  }
+  .facebook .icon {
+    background-color: white;
+  }
+  footer .social-icons .icon {
+    background-color: white;
+  }
+  .footer-contacts {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+  }
+  .footer-contacts ul li a {
+    text-decoration: none;
+    color: white;
+  }
+}
